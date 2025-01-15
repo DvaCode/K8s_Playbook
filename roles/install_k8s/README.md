@@ -1,4 +1,4 @@
-### 1-3. `roles/install_k8s/README.md`
+### 1-1. `roles/install_k8s/README.md`
 
 ```markdown
 # 🛠️ install_k8s Role
