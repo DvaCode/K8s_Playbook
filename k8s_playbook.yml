@@ -1,4 +1,5 @@
 ---
+# k8s_playbook.yml
 - hosts: all_worker # origin all
   become: true
   pre_tasks:

@@ -1,0 +1,5 @@
+# logfile
+ansible.log
+tmp/vault-pass
+*.log
+.vscode/*

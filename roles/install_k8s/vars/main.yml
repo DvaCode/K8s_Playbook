@@ -1,5 +1,5 @@
 ---
-# vars file for k8
+# roles/install_k8s/vars/main.yml
 
 arch_mapping_var:
   x86_64: amd64
@@ -16,5 +16,3 @@ packages:
   - ca-certificates
 
 k8s_version: v1.32
-Calico_version: v3.28.1
-Pod_CIDR: 172.16.0.0/24 # origin 172.16.0.0/12
