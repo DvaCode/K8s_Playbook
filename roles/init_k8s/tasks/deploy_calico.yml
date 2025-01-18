@@ -1,0 +1,11 @@
+---
+# roles/init_k8s/tasks/deploy_calico.yml
+- name: Download Calico manifest
+  get_url:
+    url: https://raw.githubusercontent.com/projectcalico/calico/{{ Calico_version }}/manifests/calico.yaml
+    dest: /tmp/calico.yaml
+
+- name: Apply Calico network plugin
+  ansible.builtin.command: kubectl apply -f /tmp/calico.yaml
+  args:
+    chdir: /tmp

@@ -1,0 +1,11 @@
+---
+# roles/init_k8s/tasks/init_kubeadm.yml
+- name: Initialize Kubernetes Cluster
+  ansible.builtin.shell: |
+    kubeadm init --pod-network-cidr={{ Pod_CIDR }} --apiserver-advertise-address={{ ansible_facts.default_ipv4.address }}
+
+- name: Set up kubeconfig for the user
+  ansible.builtin.shell: |
+    mkdir -p $HOME/.kube
+    cp /etc/kubernetes/admin.conf $HOME/.kube/config
+    chown $(id -u):$(id -g) $HOME/.kube/config
