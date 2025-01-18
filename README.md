@@ -15,17 +15,17 @@
 ├── README.md            # (바로 이 파일)
 ├── ansible.cfg
 ├── inventory
-│   ├── host_vars
-│   │   ├── master.yml
-│   │   ├── worker1.yml
-│   │   ├── worker2.yml
-│   │   └── worker3.yml
-│   └── inventory.ini
+│    ├── host_vars
+│    │   ├── master.yml
+│    │   ├── worker1.yml
+│    │   ├── worker2.yml
+│    │   └── worker3.yml
+│    └── inventory.ini
 ├── k8s_playbook.yml     # 플레이북 (마스터/워커 각각 따로 구성)
 └── roles
-   ├── init_k8s         # 클러스터 초기화(마스터 역할)
-   ├── install_k8s      # 쿠버네티스 설치 및 기본 설정(마스터/워커 공통)
-   └── nfs              # NFS 서버 설치/공유
+    ├── init_k8s         # 클러스터 초기화(마스터 역할)
+    ├── install_k8s      # 쿠버네티스 설치 및 기본 설정(마스터/워커 공통)
+    └── nfs              # NFS 서버 설치/공유
 ```
 
 ## 📝 사용 방법
