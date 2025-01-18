@@ -51,12 +51,14 @@
    ```bash
    ansible-playbook -i inventory/inventory.ini k8s_playbook.yml
 
-- 플레이북은 먼저 워커 노드 쪽에 기본 설치(`install_k8s`)를 수행하고, 이후 마스터 노드(또는 `masters` 그룹)에서 초기화(`init_k8s`)와 클러스터 검증을 진행합니다.
+    - 플레이북은 먼저 워커 노드 쪽에 기본 설치(`install_k8s`)를 수행하고, 이후 마스터 노드(또는 `masters` 그룹)에서 초기화(`init_k8s`)와 클러스터 검증을 진행합니다.
 
-**Ansible 조건**
-
-- ansible core.ver : 2.16.12
-- python version : 3.12
+    **Ansible 조건**
+        - ansible core.ver : 2.16.12
+        - python version : 3.12
+3. **세부 조건**
+    - OS: Ubuntu
+    - CNI: Calico
 
 1. **플레이북 완료 후**
     - 마스터 노드에서 `kubectl get nodes` 명령으로 클러스터 노드가 `Ready` 상태인지 확인 가능합니다.
@@ -75,15 +77,8 @@
 
 이 외에도 롤별 `vars`나 `defaults` 디렉토리를 참고해보시면 더 다양한 파라미터를 확인하실 수 있습니다.
 
-## 🤝 기여 방법
-
-1. 이 저장소를 포크(Fork) 후 로컬로 클론(clone)합니다.
-2. 새로운 브랜치를 생성하고(`git checkout -b feature/my-improvement`) 수정 사항을 작업합니다.
-3. 변경 사항을 커밋하고(`git commit -m "Add some improvements"`) 푸시합니다.
-4. Pull Request를 생성하여 변경 사항을 공유합니다.
-
 ## 🎉 마치며
 
 이 플레이북을 통해 **간단하고 효율적으로** Kubernetes 클러스터를 구축할 수 있습니다.
 
-버그나 개선점은 이슈(issues)나 PR을 통해 언제든 제보 부탁드립니다. 감사합니다. 🙏
+버그나 개선점은 언제든 제보 부탁드립니다. 감사합니다. 🙏
